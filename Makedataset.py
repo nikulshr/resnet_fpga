@@ -1,3 +1,5 @@
+# X is the 2D input and Y is the classification result
+# This func just append them together into a dataset.
 def make_dataset(file_path, train=True):
  
   datasets = []
@@ -28,6 +30,7 @@ def make_dataset(file_path, train=True):
   return dataset
 
 class MyDataSet(data.Dataset):
+  # The "train" parameter would tell which dataset to use.
   def __init__(self, file_path, transform = None, train = True):
     self.train = train
     if self.train:
