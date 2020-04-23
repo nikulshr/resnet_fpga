@@ -7,6 +7,7 @@ with h5py.File('GOLD_XYZ_OSC.0001_1024.hdf5') as h5_file:
 	for gname, group in h5_file.items():
 		print(group)
 		dataset.append(group)
+    print(dataset[0][])
 
 # parse them into train and test dataset 
 	ftrain = h5py.File('traintest.h5','w')
