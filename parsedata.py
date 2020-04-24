@@ -16,15 +16,15 @@ with h5py.File('GOLD_XYZ_OSC.0001_1024.hdf5') as h5_file:
 	index = 0
 	count = 0
 	flag = True
-	# trainXset = ftrain.create_dataset('X',data = dataset[0][0])
-	# trainYset = ftrain.create_dataset('Y',data = dataset[1][0])
-	testXset = ftest.create_dataset('X',data = dataset[0][0])
-	testYset = ftest.create_dataset('Y',data = dataset[1][0])
+	trainXset = ftrain.create_dataset('X',data = dataset[0][0][None,...], maxshape = (2531904,1024,2))
+	trainYset = ftrain.create_dataset('Y',data = dataset[1][0][None,...], maxshape = (2531904,24))
+	testXset = ftest.create_dataset('X',data = dataset[0][0][None,...],maxshape = (24000,1024,2))
+	testYset = ftest.create_dataset('Y',data = dataset[1][0][None,...],maxshape = (24000,24))
 	# print(dataset[1][index][Ynum])
-	
-	testXset.resize(24000, 1024, 2)
-	testYset.resize(24000，24)
-
+	trainXset.resize((2531904, 1024, 2))
+	trainYset.resize((2531904, 24))
+	testXset.resize((24000, 1024, 2))
+	testYset.resize((24000, 24))
 	counttest = 0
 	counttrain = 0
 	countall = 0
@@ -53,15 +53,15 @@ with h5py.File('GOLD_XYZ_OSC.0001_1024.hdf5') as h5_file:
 				# Ynum = Ynum + 1
 
 		else:
-			# lattercounttrain = counttrain + 1
-			# trainXset[counttrain:lattercounttrain] = dataset[0][index]
-			# trainYset[counttrain:lattercounttrain] = dataset[1][index]
+			lattercounttrain = counttrain + 1
+			trainXset[counttrain:lattercounttrain] = dataset[0][index]
+			trainYset[counttrain:lattercounttrain] = dataset[1][index]
 			index = index + 1
-			# counttrain = counttrain + 1
+			counttrain = counttrain + 1
 		
 # Let you see the processing
 		if index % 1000 == 0:
-			countall = countall + 1
+			# countall = countall + 1
 			print(index/2555904)
 
 
