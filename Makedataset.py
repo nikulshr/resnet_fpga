@@ -52,14 +52,14 @@ class MyDataSet(data.Dataset):
     if self.train:
       img_path, label_path = self.train_set_path[index]
       img = self.traindatasets[0][img_path]
-      label = self.traindatasets[0][label_path]
+      label = self.traindatasets[1][label_path]
       if self.transform is not None:
         img = self.transform(img)
       return img,label
     else:
       img_path, label_path = self.test_set_path[index]
       img = self.testdatasets[0][img_path]
-      label = self.testdatasets[0][label_path]
+      label = self.testdatasets[1][label_path]
       if self.transform is not None:
         img = self.transform(img)
       return img,label
