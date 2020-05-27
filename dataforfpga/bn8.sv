@@ -1,9 +1,0 @@
-localparam BN8_CH = 64;
-localparam BN8_BW_A = 4;
-localparam BN8_BW_B = 16;
-localparam BN8_RSHIFT = 8;
-localparam BN8_BW_IN = 16;
-localparam BN8_BW_OUT = 1;
-localparam BN8_MAXVAL = 1;
-reg [BN8_CH-1:0][BN8_BW_A-1:0] bn8_a = { 4'h5, 4'h4, 4'h4, 4'h7, 4'h5, 4'h6, 4'h4, 4'h7, 4'h6, 4'h3, 4'h5, 4'h4, 4'h5, 4'h6, 4'h6, 4'h3, 4'h5, 4'h4, 4'h5, 4'h4, 4'h6, 4'h6, 4'h6, 4'h6, 4'h4, 4'h4, 4'h4, 4'h5, 4'h5, 4'h6, 4'h7, 4'h4, 4'h5, 4'h5, 4'h6, 4'h5, 4'h5, 4'h5, 4'h6, 4'h5, 4'h5, 4'h4, 4'h5, 4'h6, 4'h5, 4'h6, 4'h5, 4'h6, 4'h7, 4'h5, 4'h4, 4'h4, 4'h5, 4'h6, 4'h7, 4'h7, 4'h6, 4'h5, 4'h5, 4'h6, 4'h6, 4'h5, 4'h4, 4'h5 };
-reg [BN8_CH-1:0][BN8_BW_B-1:0] bn8_b = { 16'hdea6, 16'hfeab, 16'hef3a, 16'h06ad, 16'he402, 16'hf68e, 16'he869, 16'hf2dd, 16'hecef, 16'hf65d, 16'hf238, 16'hdf64, 16'hf911, 16'hed08, 16'hea35, 16'heffd, 16'hf051, 16'he5e2, 16'h04b9, 16'hec66, 16'hfc64, 16'hf2ef, 16'he77a, 16'he470, 16'hfe9a, 16'hf544, 16'hf3cb, 16'hfa73, 16'hf9d3, 16'hf632, 16'hf2bd, 16'he3d1, 16'hfb1d, 16'hefd1, 16'hebbe, 16'hdc78, 16'hea18, 16'h01af, 16'hf2f3, 16'hf071, 16'hcbab, 16'hf606, 16'he72d, 16'he6d1, 16'heb09, 16'hf377, 16'hfb0f, 16'h01a5, 16'he284, 16'hf7aa, 16'he296, 16'hf58b, 16'hde56, 16'hf667, 16'hbeaa, 16'he180, 16'he186, 16'he957, 16'hf9ff, 16'hf7bd, 16'hda5e, 16'hfbc1, 16'hefa6, 16'h04a5 };
