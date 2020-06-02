@@ -4,18 +4,18 @@ import sys
 import os
 
 #generate c file for batch normal layer
-def make_bn( idx, model_dir, f_type = "lyr", a_prec = 8, b_prec = 14, r_shift = 19 ):
+def make_bn( idx, model_dir, f_type = "lyr", a_prec = 8, b_prec = 14, r_shift = 18 ):
     f_in = model_dir + "/new_resnet_bn%s%d.csv" % (f_type,idx)
     f_a_b = model_dir + "/new_resnet_bn%s%d_a_b.csv" % (f_type,idx)
-    f = open( f_in )
-    rdr = csv.reader( f )
-    data = [ [ float(y) for y in x ]for x in rdr ]
-    f.close()
-    f = open( f_a_b, "w" )
-    wrt = csv.writer( f )
-    wrt.writerow( [ round(x * ( 1 << a_prec )) for x in data[0] ] )
-    wrt.writerow( [ round(x * ( 1 << b_prec )) for x in data[1] ] )
-    f.close()
+#    f = open( f_in )
+#    rdr = csv.reader( f )
+#    data = [ [ float(y) for y in x ]for x in rdr ]
+#    f.close()
+#    f = open( f_a_b, "w" )
+#    wrt = csv.writer( f )
+#    wrt.writerow( [ round(x * ( 1 << a_prec )) for x in data[0] ] )
+#    wrt.writerow( [ round(x * ( 1 << b_prec )) for x in data[1] ] )
+#    f.close()
     if f_type == "lyr":
         f_out = model_dir + "/bn%d_a_b" % idx
     else:
