@@ -13,9 +13,8 @@ Automatic modulation classification of radio signals is useful for spectrum sens
 Please glance at the commit messages to see progress.
 
 ## Team
-- Kartik Kulgod (SW)
-- Zesen Zhang (SW)
-- Nitish Kulshrestha (HW)
+- Students: Kartik Kulgod, Zesen Zhang (SW/ML), Nitish Kulshrestha (HW)
+- Advisors: Alireza Khodamoradi, Ryan Kastner
 
 ## References
 - Real-time Automatic Modulation Classification using RFSoC
